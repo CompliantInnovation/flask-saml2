@@ -9,7 +9,6 @@ with open('flask_saml2/version.py') as version_file:
     exec(version_file.read())
     assert version_str is not None
 
-
 setup_kwargs = dict(
     name='flask-saml2',
     version=version_str,
@@ -27,7 +26,7 @@ setup_kwargs = dict(
         'Flask>=1.0.0',
         'signxml>=2.4.0',
         'lxml>=3.8.0',
-        'pyopenssl<18',
+        'pyopenssl~=22.1.0',
         'defusedxml>=0.5.0',
         'pytz>=0',
         'iso8601~=0.1.12',
@@ -48,7 +47,6 @@ setup_kwargs = dict(
         'Topic :: System :: Systems Administration :: Authentication/Directory',
     ],
 )
-
 
 if __name__ == '__main__':
     setup(**setup_kwargs)
